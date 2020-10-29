@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>form registrasi</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style type="text/css">
+            label{
+                font-family: calibri;
+
+            }
+
+            input[type=text],[type=date],[type=password],[type=email]{
+                margin: 5px auto;
+                 width: 15%;
+                padding: 5px;
+            
+            }
+
+            select{
+                margin: 5px auto;
+                 width: 15%;
+                padding: 5px;
+            }
+
+            h3{
+                font-family: calibri;
+
+            }
+
+            textarea{
+                columns: 50px;
+                
+            }
+            .buttonsubmit{
+                background-color:lightseagreen;
+                border: none;
+                color: white;
+                padding: 6px 24px;
+                margin-left: 20px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 14px;
+  
+            }
+            .buttonreset{
+                background-color:steelblue;
+                border: none;
+                color: white;
+                padding: 6px 24px;
+                margin-left: 20px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 14px;   
+            }
+        </style>
+   </head>
+    <body style="background-color: whitesmoke;">
+        <form action="">
+            <fieldset id="student_registration_form" style="size: 10em; background-color:lavenderblush;">
+                <legend>Form Pendaftaran Mahasiswa Baru</legend>
+                <p id="date">
+                    <label style="margin-left: 780px;">Tanggal Mendaftar</label>
+                    <input type="date" name="date" value="date-now" style="text-align: left;">
+                </p>
+    
+                <h3>Data Diri</h3>
+                <hr />
+
+                <p>
+                    <label >Nama Lengkap</label>&emsp;
+                    <input type="text" name="name"  style="width: 40%; padding:5px;" placeholder="Masukan Nama Lengkap" autocomplete="off">
+
+                    <label style="margin-left: 50px;">NIK</label>
+                    <input type="number" name="nik" id="nik" placeholder="Masukan NIK"  autocomplete="off">
+                </p>
+                    
+                    <p>
+                     <label>Tempat Lahir</label>&emsp;&emsp;
+                     <input type="text" name="tempat_lahir" placeholder="Masukan Tempat Lahir" autocomplete="off" >
+                     
+                    <label id="dateof_birth" style="margin-left: 30px;">Tanggal Lahir</label>
+                    <input type="date" name="date_of_birth" value="date-now">
+
+                    <label style="margin-left: 90px;">Jenis Kelamin</label>&emsp;
+                    <input type="radio" name="jenkel" value="L">Laki-laki&emsp;
+                    <input type="radio" name="jenkel" value="P">Perempuan 
+                    </p>
+
+                    <p>
+                        <label >Email</label>&emsp;&emsp;&emsp;&emsp;&emsp;
+                        <input type="email" name="email" placeholder="Masukan Email" autocomplete="off">
+
+                        <label style="margin-left: 42px;">No Telepon</label>
+                        <input type="text" name="no_telp" placeholder="Masukan No Telepon" autocomplete="off">
+                    </p>
+                <h3>Data Alamat Asal</h3>
+                <hr />
+                <p>
+                    <label >Alamat</label>&emsp;&emsp;
+                    <textarea name="address" id="address"  ></textarea>
+
+                    <label style="margin-left: 165px;">Kode Pos</label>
+                    <input type="text" name="kode_pos" style="margin-left: 10px;" placeholder="Masukan Kode Pos" autocomplete="off">
+
+                </p>
+
+                <p>
+                    <label >Provinsi</label>
+                    <select name="provinsi" id="provinsi" style="margin-left: 25px;">
+                        <option value="disable">Pilih Provinsi</option>
+                        <option value="jawa_barat">Jawa Barat</option>
+                        <option value="jakarta">Jakarta</option>
+                        <option value="jawa_tengah">Jawa Tengah</option>
+                    </select>
+
+                    <label style="margin-left: 60px;">Kabupaten</label>
+                    <select name="kabupaten" id="kabupaten">
+                        <option value="disable">Pilih Kabupaten</option>
+                        <option value="bogor">Bogor</option>
+                        <option value="jakarta_barat">Jakarta Barat</option>
+                        <option value="pemalang">Pemalang</option>
+                    </select>
+
+                    <label style="margin-left: 60px;">Kecamatan</label>
+                    <select name="kecamatan" id="kecamatan">
+                        <option value="disable">Pilih Kecamatan</option>
+                        <option value="bogor_barat">Bogor Barat</option>
+                        <option value="kebon_jeruk">Kebon Jeruk</option>
+                        <option value="taman">Taman</option>
+                    </select>
+                </p>
+
+                <h3>Data Pendidikan</h3>
+                <hr />
+
+                <p>
+                    <label>Pendidikan Terakhir</label>
+                    <select name="pendidikan_terakhir" id="pendidikan Terakhir">
+                        <option value="disable">Pilih Pendidikan</option>
+                        <option value="sma_ipa">SMA IPA</option>
+                        <option value="sma_ips">SMA IPS</option>
+                        <option value="smk_rpl">SMK RPL</option>
+                        <option value="smk_tkj">SMK TKJ</option>
+                    </select>
+
+                    <label style="margin-left: 20px;;">Nama Sekolah</label>
+                    <input type="text" name="nama_sekolah" id="nama_sekolah" placeholder="Masukan Nama Sekolah" autocomplete="off">
+
+                    <label style="margin-left: 40px;;">Rata-rata Nilai Kelas 12</label>
+                    <input type="text" name="nilai" id="nilai" placeholder="Masukan Nilai Kelas 12 " autocomplete="off ">
+                </p>
+
+                 <h3>Pilih Program Studi</h3>
+                 <hr />
+
+                 <p>
+                     <label >Program Studi S1</label>
+                     <select name="s1" id="s1">
+                        <option value="disable">Pilih Program Studi</option>
+                        <option value="sma_ipa">S1-Teknik Informatika</option>
+                        <option value="sma_ips">S1-Sistem Informasi</option>
+                    </select>
+
+                    <label style="margin-left: 38px;;">Program Studi S2</label>
+                    <select name="s2" id="s2">
+                       <option value="disable">Pilih Program Studi</option>
+                       <option value="sma_ipa">S2-Teknik Informatika</option>
+                       <option value="sma_ips">S2-Sistem Informasi</option>
+                   </select>
+                 </p>
+
+                 <button type="submit" class="button buttonsubmit " name="daftar">Daftar</button>
+                 <button type="delete" class="button buttonreset" name="reset">Reset</button>
+            </fieldset>
+        </form>
+    </body>
+</html>
+
